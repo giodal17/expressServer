@@ -7,7 +7,7 @@ const validateDbId = (req, res, next) => {
 }
 
 const raiseRecord404Error = (req, res) => {
-    res.status(404).json({ error: "id inesistente!" });
+    res.status(400).json({ error: "id inesistente!" });
 }
 
 module.exports = {

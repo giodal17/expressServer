@@ -16,6 +16,7 @@ router.get("/", (req, res) => {
 
 //getById
 router.get("/:id", validateDbId, (req, res) => {
+  
   datiCrud.getById(req.params.id)
       .then((data) => {
         if (data) res.send(data);
